@@ -31,13 +31,13 @@ const Home = () => {
             }}
           />
         </div>
-      </div>
-    </div>
-    <div className="mt-8">
+        <div className="mt-14">
     <NavLink to="/About" smooth={true} duration={500} className="text-xl text-white hover:text-gray-200 cursor-pointer">
-    Scroll Down to About
+    Click here to know more about me
     </NavLink>
   </div>
+      </div>
+    </div>
   </>
   );
 };

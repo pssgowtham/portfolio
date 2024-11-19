@@ -10,6 +10,7 @@ import Skills from './Components/Skills.jsx'
 import Projects from './Components/Projects.jsx'
 import Experience from './Components/Experience.jsx'
 import About from './Components/About.jsx'
+import Resume from './Components/Resume.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +21,7 @@ const router = createBrowserRouter(
     <Route path='Experience' element={<Experience />} />
     <Route path='Projects' element={<Projects />} />
     <Route path='About' element={<About />} />
+    <Route path='Resume' element={<Resume />} />
     </Route>
   )
 )
