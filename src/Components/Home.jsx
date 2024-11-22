@@ -2,6 +2,7 @@ import React from 'react';
 import Typewriter from 'typewriter-effect';
 import { Link } from 'react-scroll';
 import { NavLink} from 'react-router-dom'
+import { FaLinkedin, FaGithub, FaFilePdf } from 'react-icons/fa';
 
 const Home = () => {
   const name = "Santosh Sai Gowtham Pasala";
@@ -31,11 +32,33 @@ const Home = () => {
             }}
           />
         </div>
-        <div className="mt-14">
-    <NavLink to="/About" smooth={true} duration={500} className="text-xl text-gray-600 hover:text-gray-900 cursor-pointer">
-    Click here to know more about me
-    </NavLink>
-  </div>
+        
+  <div className="flex justify-center space-x-6 mt-10">
+            <a
+              href="https://www.linkedin.com/in/santoshsaigowtham/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 hover:text-blue-600 text-4xl"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://github.com/pssgowtham"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-700 hover:text-gray-900 text-4xl"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="/santoshsaigowtham_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 hover:text-red-600 text-4xl"
+            >
+              <FaFilePdf />
+            </a>
+          </div>
       </div>
     </div>
   </>
