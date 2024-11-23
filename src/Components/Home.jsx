@@ -7,11 +7,20 @@ import { FaLinkedin, FaGithub, FaFilePdf } from 'react-icons/fa';
 const Home = () => {
   const name = "Santosh Sai Gowtham Pasala";
   const roles = ["Full-Stack Developer", "Software Programmer", "Cloud Enthusiast"];
+  const [isVisible, setIsVisible] = React.useState(false);
+
+  // Simulate page load animation
+  React.useEffect(() => {
+    const timer = setTimeout(() => setIsVisible(true), 100); // Delay to ensure smooth entry
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
-    <>
+    <div className={`transform transition-opacity duration-1000 ${
+      isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+    }`}>
     <div
-      id="home"
+      id="home" 
       className="flex items-center justify-center min-h-screen bg-cover bg-center"
       style={{
         backgroundImage: `
@@ -61,7 +70,7 @@ const Home = () => {
           </div>
       </div>
     </div>
-  </>
+  </div>
   );
 };
 

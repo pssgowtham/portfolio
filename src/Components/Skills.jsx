@@ -21,13 +21,15 @@ function Skills() {
         <div className="flex flex-col space-y-8 md:space-y-12">
           {/* Section Header */}
           <div>
-            <h2 className="text-4xl font-bold text-gray-800 animate-fadeInUp">Skills</h2>
+          <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
+          Skills
+        </h2>
           </div>
 
           {/* Languages & Web Technologies */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-700">Languages & Web Technologies</h3>
-            <div className="flex flex-wrap gap-6 mt-2">
+            <h3 className="text-xl font-serif font-semibold text-gray-700">Languages & Web Technologies</h3>
+            <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "c++.png", alt: "C++", label: "C++" },
                 { src: "java.png", alt: "Java", label: "Java" },
@@ -60,8 +62,8 @@ function Skills() {
 
           {/* Frameworks */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-700">Frameworks</h3>
-            <div className="flex flex-wrap gap-6 mt-2">
+            <h3 className="text-xl font-serif font-semibold text-gray-700">Frameworks</h3>
+            <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "flask.png", alt: "Flask", label: "Flask" },
                 { src: "react.png", alt: "React", label: "React" },
@@ -93,8 +95,8 @@ function Skills() {
 
           {/* Add other sections following the same structure */}
           <div>
-            <h3 className="text-xl font-semibold text-gray-700">Databases & Cloud Technologies</h3>
-            <div className="flex flex-wrap gap-6 mt-2">
+            <h3 className="text-xl font-serif font-semibold text-gray-700">Databases & Cloud Technologies</h3>
+            <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "mysql.png", alt: "MySQL", label: "MySQL" },
                 { src: "mongodb.png", alt: "MongoDB", label: "MongoDB" },
@@ -125,8 +127,8 @@ function Skills() {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold text-gray-700">Software Tools & Technologies</h3>
-            <div className="flex flex-wrap gap-6 mt-2">
+            <h3 className="text-xl font-serif font-semibold text-gray-700">Software Tools & Technologies</h3>
+            <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "git.png", alt: "Git", label: "Git" },
                 { src: "jira.png", alt: "JIRA", label: "JIRA" },
