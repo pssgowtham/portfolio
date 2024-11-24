@@ -28,6 +28,15 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} basename="/portfolio"/>
+    <RouterProvider router={router} 
+    future={{
+      v7_startTransition: true,
+      v7_relativeSplatPath: true,
+      v7_fetcherPersist: true,
+      v7_partialHydration: true,
+      v7_skipActionErrorRevalidation: true,
+      v7_normalizeFormMethod: true,
+    }}
+    basename="/portfolio"/>
   </StrictMode>,
 )

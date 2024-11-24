@@ -3,6 +3,7 @@ import Typewriter from 'typewriter-effect';
 import { Link } from 'react-scroll';
 import { NavLink} from 'react-router-dom'
 import { FaLinkedin, FaGithub, FaFilePdf } from 'react-icons/fa';
+import { SiGmail } from "react-icons/si";
 
 const Home = () => {
   const name = "Santosh Sai Gowtham Pasala";
@@ -27,8 +28,10 @@ const Home = () => {
         url('https://images.unsplash.com/photo-1518655048521-f130df041f66?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
       }}
     >
-      <div className="text-center px-6 md:px-12">
-        <h1 className="font-extralight text-5xl sm:text-6xl md:text-8xl mb-6 
+      <div className="px-6 md:px-12">
+        <h1 className="text-center lg:text-left text-5xl md:font-light font-light sm:text-4xl md:text-5xl mb-8 
+        text-gray-700 ">Hello, I'm</h1>
+        <h1 className="text-center font-extralight text-5xl sm:text-6xl md:text-8xl mb-6 
         text-gray-700">{name}</h1>
         <div className="text-3xl sm:text-4xl md:text-5xl
         flex items-center justify-center font-normal text-gray-600">
@@ -43,6 +46,15 @@ const Home = () => {
         </div>
         
   <div className="flex justify-center space-x-6 mt-10">
+            <a
+              href="mailto:psantoshsaigowtham@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-800 hover:text-red-600 text-4xl"
+            >
+              <SiGmail />
+
+            </a>
             <a
               href="https://www.linkedin.com/in/santoshsaigowtham/"
               target="_blank"
@@ -69,7 +81,9 @@ const Home = () => {
             </a>
           </div>
       </div>
+      
     </div>
+    
   </div>
   );
 };

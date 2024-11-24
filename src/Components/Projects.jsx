@@ -68,7 +68,7 @@ function Projects() {
         <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
           Projects Portfolio
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
@@ -77,7 +77,7 @@ function Projects() {
               }`}
             >
               {/* Project Header */}
-              <div className="bg-blue-500 text-white p-6">
+              <div className="bg-indigo-400 text-white p-6">
                 <h3 className="text-2xl font-semibold">{project.title}</h3>
               </div>
 
@@ -86,7 +86,7 @@ function Projects() {
                 <ul className="space-y-2 text-gray-700 text-sm">
                   {project.description.map((desc, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="mr-2 text-blue-500 font-bold">•</span>
+                      <span className="mr-2 text-indigo-500 font-bold">•</span>
                       {desc}
                     </li>
                   ))}

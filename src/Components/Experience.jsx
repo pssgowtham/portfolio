@@ -19,6 +19,7 @@ function Experience() {
         "Architected RESTful and GraphQL APIs, reducing response time by 40% and enhancing application performance.",
         "Implemented secure authentication and authorization protocols using JWT and OAuth2.",
         "Integrated MongoDB for scalable database management, optimizing query performance with 99.9% data availability.",
+        "Collaborated with cross-functional teams to deliver high-quality software products, adhering to Agile",
       ],
     },
     {
@@ -29,6 +30,9 @@ function Experience() {
         "Developed robust front-end interfaces integrated with back-end services using React.js and Node.js.",
         "Reduced average application loading time by 1.5 seconds through code optimization.",
         "Orchestrated CI/CD pipelines with Jenkins, Docker, and Kubernetes, reducing downtime by 15%.",
+        "Implemented AI Framework, incorporating ethical considerations into AI development. Detected and mitigated AI bias throughout entire AI lifecycle using Python Frameworks and Artificial Intelligence technology.",
+        "Extensive experience in database management, specializing in SQL and NoSQL databases. Key role in designing and optimizing database structures for enhanced performance, ensuring efficient data storage and retrieval. ",
+        "Expertise in handling complex queries, database indexing, and data normalization, contributing to the development of robust and scalable applications."
       ],
     },
     {
@@ -39,6 +43,8 @@ function Experience() {
         "Crafted AWS services (S3, EC2, Athena, Redshift, VPC), cutting costs by 10%.",
         "Automated resource provisioning with AWS CloudFormation and Terraform, reducing manual intervention by 50%.",
         "Secured high availability of Amazon RDS and DynamoDB databases with 99.9% uptime.",
+        "Developed a scalable data pipeline using AWS Glue, Apache Spark, and Apache Beam",
+        "Utilized AWS Lambda for serverless computing, reducing latency by 30% and improving scalability",
       ],
     },
     {
@@ -48,6 +54,7 @@ function Experience() {
       details: [
         "Generated financial data feeds and developed interactive front-end web applications.",
         "Improved data integration accuracy by 25% and boosted user engagement by 30%.",
+        "Developed and deployed RESTful APIs using Node.js and Express.js, enhancing data accessibility.",
       ],
     },
   ];
