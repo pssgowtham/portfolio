@@ -63,7 +63,7 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen font-serif flex items-center justify-center bg-gradient-to-br from-gray-50 via-white to-gray-100 px-6 py-12">
+    <div className="min-h-screen font-serif flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 px-6 py-12">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
           Projects Portfolio
