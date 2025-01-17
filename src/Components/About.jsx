@@ -20,7 +20,7 @@ function About() {
         {/* Profile Picture Section */}
         <div className="flex-shrink-0 text-center md:text-left mt-10">
           <img
-            src="https://media.licdn.com/dms/image/v2/D5603AQGE0EperXRgwg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1698957525843?e=1736985600&v=beta&t=M-EZ-HNGJM-eG6JCZmiMmwg-uWTvClVC4Y66aQhCYQk"
+            src="profile pic.png"
             alt="Santosh Sai Gowtham Pasala"
             className="w-60 h-60 md:w-72 md:h-72 rounded-full border-4 border-gray-300 shadow-lg"
           />
