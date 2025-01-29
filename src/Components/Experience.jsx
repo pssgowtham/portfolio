@@ -60,14 +60,16 @@ function Experience() {
   ];
 
   return (
-    <div className="min-h-screen font-serif flex items-center justify-center bg-gradient-to-r from-blue-50 via-gray-100 to-gray-200 px-6 py-12">
+    <div className={`min-h-screen font-serif flex items-center justify-center bg-gradient-to-r from-gray-50 via-gray-100 to-gray-200  dark:from-gray-900 dark:via-gray-950 dark:to-gray-900 px-6 py-12 transform transition-opacity duration-1000 ${
+      isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+    }`}>
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
+        <h2 className="text-5xl font-extrabold text-gray-700 dark:text-red-700 mb-16 text-center font-serif tracking-wide">
           Professional Experience
         </h2>
         <div className="relative">
           {/* Vertical Timeline */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-indigo-500 via-indigo-300 to-indigo-100 h-full"></div>
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-red-700 via-red-500 to-red-700 h-full"></div>
 
           {experiences.map((exp, index) => (
             <div
@@ -82,26 +84,26 @@ function Experience() {
                 }`}
               >
                 {/* Circle Marker with Icon */}
-                <div className="w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center border-4 border-white shadow-lg z-10">
-                  <FaBuilding className="text-white text-lg" />
+                <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center border-4 border-white dark:border-gray-800 shadow-lg z-10">
+                  <FaBuilding className="text-white dark:text-gray-900 text-lg" />
                 </div>
 
                 {/* Content Box */}
                 <div
-                  className={`bg-white shadow-2xl rounded-lg p-8 w-full max-w-lg transform ${
+                  className={`bg-white dark:bg-gray-900 shadow-2xl rounded-lg p-8 w-full max-w-lg transform ${
                     index % 2 === 0 ? "ml-10" : "mr-10"
                   }`}
                 >
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                  <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
                     {exp.role}
                   </h3>
-                  <p className="flex items-center text-gray-600 text-sm mb-4">
-                    <FaBuilding className="mr-2 text-indigo-400" /> {exp.company}
+                  <p className="flex items-center text-gray-600 dark:text-gray-300 text-sm mb-4">
+                    <FaBuilding className="mr-2 text-red-500" /> {exp.company}
                   </p>
-                  <p className="flex items-center text-gray-500 text-sm">
-                    <FaClock className="mr-2 text-indigo-400" /> {exp.duration}
+                  <p className="flex items-center text-gray-600 dark:text-gray-300 text-sm">
+                    <FaClock className="mr-2 text-red-500" /> {exp.duration}
                   </p>
-                  <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-600 text-sm">
+                  <ul className="mt-4 list-disc pl-6 space-y-2 text-gray-600 dark:text-gray-300 text-sm">
                     {exp.details.map((detail, i) => (
                       <li key={i}>{detail}</li>
                     ))}

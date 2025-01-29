@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import { useContext } from 'react';
+import { ThemeContext } from '../context/ThemeContext';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const { darkMode, toggleTheme } = useContext(ThemeContext);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -18,18 +20,18 @@ export default function Header() {
 
   const navLinkClasses = ({ isActive }) =>
     `block py-2 pr-4 pl-3 duration-200 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:p-0 ${
-      isActive ? "text-orange-700" : "text-gray-700"
+      isActive ? "text-orange-700" : "text-gray-700 dark:text-gray-100"
     }`;
 
   return (
-    <header className="shadow sticky z-50 bg-gray-100 top-0">
+    <header className="shadow sticky z-50 bg-gray-100 dark:bg-gray-900 top-0">
       <nav className=" px-4 lg:px-6 py-2.5">
         <div className="flex flex-wrap font-serif justify-between items-center mx-auto max-w-screen-xl">
           {/* Mobile Menu Toggle */}
           <button
             onClick={toggleMenu}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 dark:text-gray-100 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="mobile-menu"
             aria-expanded={isMenuOpen}
           >
@@ -58,10 +60,13 @@ export default function Header() {
               href="/santoshsaigowtham_resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black bg-white hover:bg-slate-200 border-2 border-gray-500 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
+              className="text-black dark:text-white bg-white dark:bg-black hover:bg-slate-200 border-2 border-red-500 focus:ring-1 focus:ring-red-400 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
             >
               Resume
             </a>
+            <button onClick={toggleTheme} className="ml-4 p-3 rounded-full bg-white dark:bg-gray-800 border-2 border-red-500 shadow-lg">
+                {darkMode ? '🌞' : '🌙'}
+              </button>
           </div>
 
           {/* Navigation Links */}
@@ -71,7 +76,7 @@ export default function Header() {
             } justify-between items-center w-full lg:flex lg:w-auto lg:order-1`}
             id="mobile-menu"
           >
-            <ul className="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+            <ul className=" flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
               {navItems.map((item) => (
                 <li key={item.path}>
                   <NavLink

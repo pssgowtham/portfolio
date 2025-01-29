@@ -12,6 +12,7 @@ import Experience from './Components/Experience.jsx'
 import About from './Components/About.jsx'
 import Resume from './Components/Resume.jsx'
 
+
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} >
@@ -28,6 +29,7 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <StrictMode>
+   
     <RouterProvider router={router} 
     future={{
       v7_startTransition: true,
@@ -38,5 +40,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       v7_normalizeFormMethod: true,
     }}
     basename="/portfolio"/>
+  
   </StrictMode>,
 )

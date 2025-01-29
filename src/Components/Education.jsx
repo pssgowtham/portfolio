@@ -38,38 +38,38 @@ export default function Education() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100); // Delay for smooth animation
+    const timer = setTimeout(() => setIsVisible(true), 10); // Delay for smooth animation
     return () => clearTimeout(timer);
   }, []);
 
   const renderCard = (title, subtitle, details,coursework) => (
     <div
-      className={`p-6 bg-white shadow-md rounded-lg transform transition-all duration-500 hover:scale-105 opacity-0 ${
+      className={`p-6 bg-white dark:bg-red-700 shadow-md rounded-lg transform transition-all duration-500 hover:scale-105 opacity-0 ${
         isVisible ? 'opacity-100 translate-y-0' : 'translate-y-10'
       }`}
     >
-      <h4 className="text-lg font-semibold text-gray-800">{title}</h4>
-      <p className="text-sm text-gray-600">{subtitle}</p>
-      {details && <p className="mt-2 text-sm text-gray-600">{details}</p>}
-      {coursework && <p className="mt-2 text-sm text-gray-600"><b>Course Work: </b>{coursework}</p>}
+      <h4 className="text-lg font-semibold text-gray-800 dark:text-gray-100">{title}</h4>
+      <p className="text-sm text-gray-600 dark:text-gray-300">{subtitle}</p>
+      {details && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300">{details}</p>}
+      {coursework && <p className="mt-2 text-sm text-gray-600 dark:text-gray-300"><b>Course Work: </b>{coursework}</p>}
     </div>
   );
 
   return (
     <div
-      className={`min-h-screen flex font-serif items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 px-6 py-12 transform transition-opacity duration-1000 ${
+      className={`min-h-screen flex font-serif items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200  dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 px-6 py-12 transform transition-opacity duration-1000 ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
       }`}
     >
       <div className="container mx-auto max-w-6xl flex flex-col items-center space-y-10">
         {/* Header */}
-        <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
+        <h2 className="text-5xl font-extrabold text-gray-700 dark:text-red-700 mb-16 text-center font-serif tracking-wide">
           Education
         </h2>
 
         {/* Degrees Section */}
         <div className="w-full">
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">Degrees</h3>
+          <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Degrees</h3>
           <div className="flex flex-col space-y-6">
             {degrees.map((degree, index) =>
               renderCard(degree.title, `${degree.institution} | ${degree.duration}`, degree.details, degree.coursework)
@@ -79,7 +79,7 @@ export default function Education() {
 
         {/* Certifications Section */}
         <div className="w-full">
-          <h3 className="text-xl font-semibold text-gray-700 mb-4">Certifications</h3>
+          <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-200 mb-4">Certifications</h3>
           <div className="flex flex-col space-y-6">
             {certifications.map((cert, index) =>
               renderCard(cert.title, `${cert.provider} | ${cert.date}`)

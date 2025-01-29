@@ -5,13 +5,13 @@ function Skills() {
 
   // Simulate page load animation
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100); // Delay to ensure smooth entry
+    const timer = setTimeout(() => setIsVisible(true), 10); // Delay to ensure smooth entry
     return () => clearTimeout(timer);
   }, []);
 
   return (
     <div
-      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 px-6 py-12 transform transition-opacity duration-1000 ${
+      className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200  dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 px-6 py-12 transform transition-opacity duration-1000 ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
       }`}
     >
@@ -21,14 +21,14 @@ function Skills() {
         <div className="flex flex-col space-y-8 md:space-y-12">
           {/* Section Header */}
           <div>
-          <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
+          <h2 className="text-5xl font-extrabold text-gray-700 dark:text-red-700 mb-16 text-center font-serif tracking-wide">
           Skills
         </h2>
           </div>
 
           {/* Languages & Web Technologies */}
           <div>
-            <h3 className="text-xl font-serif font-semibold text-gray-700">Languages & Web Technologies</h3>
+            <h3 className="text-xl font-serif font-semibold text-gray-700 dark:text-gray-200">Languages & Web Technologies</h3>
             <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "c++.png", alt: "C++", label: "C++" },
@@ -52,7 +52,7 @@ function Skills() {
                     alt={skill.alt}
                     className="w-16 h-16 object-contain"
                   />
-                  <span className="mt-2 text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition duration-300">
+                  <span className="mt-2 text-sm text-gray-600 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
                     {skill.label}
                   </span>
                 </div>
@@ -62,7 +62,7 @@ function Skills() {
 
           {/* Frameworks */}
           <div>
-            <h3 className="text-xl font-serif font-semibold text-gray-700">Frameworks</h3>
+            <h3 className="text-xl font-serif font-semibold text-gray-700 dark:text-gray-200">Frameworks</h3>
             <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "flask.png", alt: "Flask", label: "Flask" },
@@ -85,7 +85,7 @@ function Skills() {
                     alt={framework.alt}
                     className="w-16 h-16 object-contain"
                   />
-                  <span className="mt-2 text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition duration-300">
+                  <span className="mt-2 text-sm text-gray-600 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
                     {framework.label}
                   </span>
                 </div>
@@ -95,7 +95,7 @@ function Skills() {
 
           {/* Add other sections following the same structure */}
           <div>
-            <h3 className="text-xl font-serif font-semibold text-gray-700">Databases & Cloud Technologies</h3>
+            <h3 className="text-xl font-serif font-semibold text-gray-700 dark:text-gray-200">Databases & Cloud Technologies</h3>
             <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "mysql.png", alt: "MySQL", label: "MySQL" },
@@ -119,7 +119,7 @@ function Skills() {
                     alt={framework.alt}
                     className="w-16 h-16 object-contain"
                   />
-                  <span className="mt-2 text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition duration-300">
+                  <span className="mt-2 text-sm text-gray-600 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
                     {framework.label}
                   </span>
                 </div>
@@ -127,7 +127,7 @@ function Skills() {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-serif font-semibold text-gray-700">Software Tools & Technologies</h3>
+            <h3 className="text-xl font-serif font-semibold text-gray-700 dark:text-gray-200">Software Tools & Technologies</h3>
             <div className="flex font-serif flex-wrap gap-6 mt-2">
               {[
                 { src: "git.png", alt: "Git", label: "Git" },
@@ -151,7 +151,7 @@ function Skills() {
                     alt={framework.alt}
                     className="w-16 h-16 object-contain"
                   />
-                  <span className="mt-2 text-sm text-gray-600 opacity-0 group-hover:opacity-100 transition duration-300">
+                  <span className="mt-2 text-sm text-gray-600 dark:text-gray-300 opacity-0 group-hover:opacity-100 transition duration-300">
                     {framework.label}
                   </span>
                 </div>

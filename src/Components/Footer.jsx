@@ -5,27 +5,24 @@ import { SiGmail } from 'react-icons/si';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-100 border-t border-gray-100">
+    <footer className="bg-gray-100 dark:bg-gray-900 border-t border-red-100 dark:border-gray-900">
       <div className="mx-auto font-serif w-full max-w-screen-xl p-6">
         {/* Contact Section */}
         <div className="max-w-4xl mx-auto text-center px-6">
-          <h2 className="text-3xl font-bold mb-4 text-gray-600">Get in Touch</h2>
-          <p className="text-gray-400 text-sm mb-6">
+          <h2 className="text-3xl font-bold mb-4 text-gray-600 dark:text-gray-300">Get in Touch</h2>
+          <p className="text-gray-400 dark:text-gray-400 text-sm mb-6">
             Feel free to reach out anytime! Whether you have a question or just want to say hello, I'll get back to you ASAP!
           </p>
           <a
             href="mailto:psantoshsaigowtham@gmail.com"
-            className="inline-flex items-center justify-center px-6 py-3 
-                       font-medium text-sm rounded-full bg-gradient-to-r 
-                       from-teal-500 to-blue-500 text-white hover:from-teal-400 
-                       hover:to-blue-400 transition duration-300 shadow-lg"
+            className="text-black dark:text-white bg-white dark:bg-black hover:bg-slate-200 border-2 border-red-500 focus:ring-1 focus:ring-red-400 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
           >
             Email me
           </a>
         </div>
 
         {/* Divider */}
-        <hr className="my-8 border-gray-700 sm:mx-auto lg:my-10" />
+        <hr className="my-8 border-red-700 sm:mx-auto lg:my-10" />
 
         {/* Footer Bottom Section */}
         <div className="sm:flex sm:items-center sm:justify-between mt-8 mb-4">
@@ -34,7 +31,7 @@ export default function Footer() {
             © 2024
             <a
               href="https://pssgowthamportfolio.netlify.app/"
-              className="hover:underline ml-1 text-teal-400 hover:text-teal-300 transition-colors"
+              className="hover:underline ml-1 text-red-700 hover:text-red-500 transition-colors"
             >
               pssgowtham
             </a>

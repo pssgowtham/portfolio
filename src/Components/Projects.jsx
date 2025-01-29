@@ -5,7 +5,7 @@ function Projects() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsVisible(true), 100);
+    const timer = setTimeout(() => setIsVisible(true), 10);
     return () => clearTimeout(timer);
   }, []);
 
@@ -63,43 +63,45 @@ function Projects() {
   ];
 
   return (
-    <div className="min-h-screen font-serif flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200 px-6 py-12">
+    <div className={`min-h-screen font-serif flex items-center justify-center bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200  dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 px-6 py-12 transform transition-opacity duration-1000 ${
+      isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-90'
+    }`}>
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-5xl font-extrabold text-gray-800 mb-16 text-center font-serif tracking-wide">
+        <h2 className="text-5xl font-extrabold text-gray-700 dark:text-red-700 mb-16 text-center font-serif tracking-wide">
           Projects Portfolio
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`relative bg-white shadow-md rounded-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl ${
+              className={`relative bg-white dark:bg-gray-900 shadow-md rounded-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-xl ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
               {/* Project Header */}
-              <div className="bg-indigo-400 text-white p-6">
+              <div className="bg-red-500 dark:bg-red-600 text-white dark:text-gray-900 p-6">
                 <h3 className="text-2xl font-semibold">{project.title}</h3>
               </div>
 
               {/* Project Body */}
               <div className="p-6">
-                <ul className="space-y-2 text-gray-700 text-sm">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-200 text-sm">
                   {project.description.map((desc, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="mr-2 text-indigo-500 font-bold">•</span>
+                      <span className="mr-2 text-red-500 font-bold">•</span>
                       {desc}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-4">
-                  <h4 className="text-gray-800 font-semibold text-sm mb-2">
+                  <h4 className="text-gray-800 dark:text-gray-100 font-semibold text-sm mb-2">
                     Technologies:
                   </h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, i) => (
                       <span
                         key={i}
-                        className="bg-blue-100 text-blue-800 text-xs font-medium px-3 py-1 rounded-full"
+                        className="bg-blue-100 dark:bg-gray-800 text-red-800 dark:text-red-500 text-xs font-medium px-3 py-1 rounded-full"
                       >
                         {tech}
                       </span>
@@ -109,17 +111,17 @@ function Projects() {
               </div>
 
               {/* Footer with Links */}
-              <div className="p-4 bg-gray-50 flex items-center justify-between">
+              <div className="p-4 bg-gray-50 dark:bg-gray-900 flex items-center justify-between">
                 <button
                   onClick={() => window.open(project.link, "_blank")}
-                  className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold transition"
+                  className="flex items-center gap-2 text-red-600 hover:text-red-800 font-semibold transition"
                 >
                   <FaGithub />
                   GitHub Repo
                 </button>
                 <button
                   onClick={() => window.open(project.link, "_blank")}
-                  className="flex items-center gap-2 text-gray-600 hover:text-gray-800 font-semibold transition"
+                  className="flex items-center gap-2 text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-gray-100 font-semibold transition"
                 >
                   <FaExternalLinkAlt />
                   Live Demo
